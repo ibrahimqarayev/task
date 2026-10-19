@@ -53,8 +53,23 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         int number = scanner.nextInt();
 
-        // number/==0
+        boolean sade = true;
 
+        if (number < 2) {
+            sade = false;
+        } else {
+            for (int i = 2; i < number; i++) {
+                if (number % i == 0) {
+                    sade = false;
+                    break;
+                }
+            }
+        }
+        if (sade) {
+            System.out.println("Sade");
+        } else {
+            System.out.println("Sade deyil");
+        }
     }
 
     public static void task45(int number) {
