@@ -31,7 +31,21 @@ public class Main {
     public static void task43() {
         int[] numbers = {12, 2, 3, 4, 5, 6, 7, 8, 9, 10};
 
+        int max = numbers[0];
+        int min = numbers[0];
 
+        for (int i = 1; i < numbers.length; i++) {
+            if (numbers[i] > max) {
+                max = numbers[i];
+            }
+
+            if (numbers[i] < min) {
+                min = numbers[i];
+            }
+        }
+
+        System.out.println("Max " + max);
+        System.out.println("Min " + min);
     }
 
     public static void task44() {
